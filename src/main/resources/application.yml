@@ -1,0 +1,17 @@
+spring:
+  config:
+    import: classpath:/properties/env.yml
+
+  application:
+    name: toy-config-service
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${github.uri}
+          ignore-local-ssh-settings: true
+          private-key: ${github.private-key}
+
+server:
+  port: 9000
