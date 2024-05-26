@@ -3,7 +3,7 @@ spring:
     import: classpath:/properties/env.yml
 
   application:
-    name: toy-config-service
+    name: config-server
 
   cloud:
     config:
@@ -12,6 +12,13 @@ spring:
           uri: ${github.uri}
           ignore-local-ssh-settings: true
           private-key: ${github.private-key}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${eureka.server}
 
 server:
   port: 9000
