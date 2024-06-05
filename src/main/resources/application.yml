@@ -1,6 +1,6 @@
 spring:
   config:
-    import: classpath:/properties/env.yml
+    import: classpath:/properties/env.yml #ADMIN의 username과 password, EUREKA url, GITHUB repo의 ssh 주소와 private key
 
   application:
     name: config-server
